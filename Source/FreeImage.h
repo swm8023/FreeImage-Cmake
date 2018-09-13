@@ -23,8 +23,10 @@
 // Use at your own risk!
 // ==========================================================
 
+
 #ifndef FREEIMAGE_H
 #define FREEIMAGE_H
+#include "config.h"
 
 // Version information ------------------------------------------------------
 

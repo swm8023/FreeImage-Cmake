@@ -238,7 +238,9 @@ FreeImage_Initialise(BOOL load_local_plugins_only) {
 			*/
 			s_plugins->AddNode(InitBMP);
 			s_plugins->AddNode(InitICO);
+#ifdef SUPPORT_FMT_JPEG
 			s_plugins->AddNode(InitJPEG);
+#endif
 			s_plugins->AddNode(InitJNG);
 			s_plugins->AddNode(InitKOALA);
 			s_plugins->AddNode(InitIFF);
@@ -254,7 +256,9 @@ FreeImage_Initialise(BOOL load_local_plugins_only) {
 			s_plugins->AddNode(InitPNM, NULL, "PPMRAW", "Portable Pixelmap (RAW)", "ppm", "^P6");
 			s_plugins->AddNode(InitRAS);
 			s_plugins->AddNode(InitTARGA);
+#ifdef SUPPORT_FMT_TIFF
 			s_plugins->AddNode(InitTIFF);
+#endif
 			s_plugins->AddNode(InitWBMP);
 			s_plugins->AddNode(InitPSD);
 			s_plugins->AddNode(InitCUT);
@@ -263,18 +267,28 @@ FreeImage_Initialise(BOOL load_local_plugins_only) {
 			s_plugins->AddNode(InitDDS);
 	        s_plugins->AddNode(InitGIF);
 	        s_plugins->AddNode(InitHDR);
+#ifdef SUPPORT_FMT_TIFF
 			s_plugins->AddNode(InitG3);
+#endif
 			s_plugins->AddNode(InitSGI);
+#ifdef SUPPORT_FMT_OPENEXR
 			s_plugins->AddNode(InitEXR);
+#endif
+#ifdef SUPPORT_FMT_JPEG
 			s_plugins->AddNode(InitJ2K);
 			s_plugins->AddNode(InitJP2);
+#endif
 			s_plugins->AddNode(InitPFM);
 			s_plugins->AddNode(InitPICT);
 			s_plugins->AddNode(InitRAW);
+#ifdef SUPPORT_WEBP
 			s_plugins->AddNode(InitWEBP);
+#endif
+#ifdef SUPPORT_FMT_JXR
 #if !(defined(_MSC_VER) && (_MSC_VER <= 1310))
 			s_plugins->AddNode(InitJXR);
 #endif // unsupported by MS Visual Studio 2003 !!!
+#endif
 			
 			// external plugin initialization
 

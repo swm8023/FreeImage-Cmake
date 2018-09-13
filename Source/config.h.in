@@ -1,0 +1,12 @@
+// use static lib
+#cmakedefine FREEIMAGE_LIB
+
+#cmakedefine SUPPORT_FMT_WEBP
+
+#cmakedefine SUPPORT_FMT_JPEG
+
+#cmakedefine SUPPORT_FMT_OPENEXR
+
+#cmakedefine SUPPORT_FMT_TIFF
+
+#cmakedefine SUPPORT_FMT_JXR
